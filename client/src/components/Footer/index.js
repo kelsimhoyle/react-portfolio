@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.scss";
 import { MdPlace } from "react-icons/md";
 
 const Footer = () => {

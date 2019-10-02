@@ -20,20 +20,20 @@ const PortfolioItem = props => {
             onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
             onMouseLeave={() => set({ xys: [0, 0, 1] })}
             style={{ transform: properties.xys.interpolate(trans) }}>
-            <div className="border">
-                <animated.div class="c front" style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
-                    <h5>{props.name}</h5>
-                    <img src={props.image} alt={props.name} />
-                    <MdExpandMore onClick={() => setFlipped(flipped => !flipped)} className="control" />
-                </animated.div>
-                <animated.div class="c back" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
+
+                {flipped ? <animated.div className="c back" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
                     <h5>{props.name}</h5>
                     <p>{props.description}</p>
                     <a href={props.deployed}>Deployed</a>
                     <a href={props.github}>Github</a>
                     <MdExpandLess onClick={() => setFlipped(flipped => !flipped)} className="control" />
-                </animated.div>
-            </div>
+                </animated.div> 
+                :
+                <animated.div className="c front" style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
+                    <h5>{props.name}</h5>
+                    <img src={props.image} alt={props.name} />
+                    <MdExpandMore onClick={() => setFlipped(flipped => !flipped)} className="control" />
+                </animated.div> }
         </animated.div>
     )
 }

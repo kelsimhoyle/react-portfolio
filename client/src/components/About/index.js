@@ -7,7 +7,7 @@ const About = () => {
         <div id="about">
             <div className="content">
                 <h2>About Me</h2>
-                <ul>
+                <ul className="about-me">
                     <li className="describe">
                         <MdWhatshot className="list-icon" />
                         <h5>Passionate</h5>
@@ -27,7 +27,7 @@ const About = () => {
                 <div className="content">
                     <div className="clearfix">
                         <div className="float-right">
-                            <img src="images/portrait.jpg" alt="portrait" class="portrait" />
+                            <img src="images/portrait.jpg" alt="portrait" className="portrait" />
                         </div>
                         <div className="float-left">
                             <p>I am a full stack web developer with a background in education. I started coding as a

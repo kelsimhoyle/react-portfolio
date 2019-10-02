@@ -1,0 +1,55 @@
+@import "../../sass/variables.scss";
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.nav-item {
+    color: whitesmoke;
+}
+
+.nav-item, 
+.logo {
+    cursor: pointer;
+}
+
+.logo {
+    margin: 0;
+}
+
+#navbar,
+.logo,
+.nav-item li {
+    transition: width 1s, height 1s;
+}
+
+#navbar {
+    background-color: $primary-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    // box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+.large {
+    height: 75px;
+    .logo{
+        height: 75px
+    }
+    .nav-item {
+        font-size: 24px;
+    }
+}
+
+.small {
+    height: 50px;
+    opacity: 0.9;
+    .logo {
+        height: 50px;
+    }
+}

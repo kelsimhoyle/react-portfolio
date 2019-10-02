@@ -1,3 +1,5 @@
+@import "../../sass/variables.scss";
+
 #landing-content {
     color: whitesmoke;
     height: 30%;
@@ -10,5 +12,5 @@
  
  #landing-window {
     height: 100vh;
-    background-color: #F77B77;
+    background-color: $primary-color;
  }
