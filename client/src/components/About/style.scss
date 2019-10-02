@@ -1,0 +1,43 @@
+li.describe {
+    width: 25%;
+    justify-content: center;
+    text-align: center;
+ }
+ 
+ .list-icon {
+    font-size: 60px;
+ }
+
+ ul {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ }
+
+ .portrait {
+    width: 100%;
+    height: auto;
+ }
+
+ .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+ }
+ 
+
+ .float-left {
+    float: left;
+    width: 60%;
+    padding: 2% 5% 5% 0;
+ }
+ 
+ 
+ .float-right {
+    float: right;
+    padding: 2% 5% 5% 0;
+    width: 30%;
+ }
