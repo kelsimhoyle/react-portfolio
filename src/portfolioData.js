@@ -27,6 +27,19 @@ const portfolioData = [
         github: "https://github.com/kelsimhoyle/project-2",
         image: "images/portfolio-images/inHighSpirits.png",
         description: "Users can explore all that Colorado distilleries has to offer. Technologies: Node.js, Sequelize, Passport, Session, Handlebars, and Materialize. "
+    },
+    {
+        name: "KanGoPak: Trip Packer",
+        deployed: "https://safe-earth-56764.herokuapp.com/",
+        github: "https://github.com/lberti92/kango-pak",
+        image: "images/portfolio-images/kangoPack.png",
+        description: ""
+    },
+    {
+    name: "GoodReads Mongo Scraper",
+    deployed: "https://protected-crag-23174.herokuapp.com/",
+    github: "https://github.com/kelsimhoyle/mongoScraping",
+    description: ""
     }
 ]
 
