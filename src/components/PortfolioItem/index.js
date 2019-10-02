@@ -24,15 +24,17 @@ const PortfolioItem = props => {
                 {flipped ? <animated.div className="c back" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
                     <h5>{props.name}</h5>
                     <p>{props.description}</p>
-                    <a href={props.deployed}>Deployed</a>
-                    <a href={props.github}>Github</a>
-                    <MdExpandLess onClick={() => setFlipped(flipped => !flipped)} className="control" />
+                    <div className="bottom links" >
+                    <p><a href={props.deployed}>Deployed Project</a></p>
+                    <p><a href={props.github}>View Repository on GitHub</a></p>
+                    </div>
+                    <MdExpandLess onClick={() => setFlipped(flipped => !flipped)} className="control bottom" />
                 </animated.div> 
                 :
                 <animated.div className="c front" style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
                     <h5>{props.name}</h5>
                     <img src={props.image} alt={props.name} />
-                    <MdExpandMore onClick={() => setFlipped(flipped => !flipped)} className="control" />
+                    <MdExpandMore onClick={() => setFlipped(flipped => !flipped)} className="control bottom" />
                 </animated.div> }
         </animated.div>
     )

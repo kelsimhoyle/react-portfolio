@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../khlogo.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./style.scss";

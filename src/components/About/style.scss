@@ -1,43 +1,70 @@
 li.describe {
-    width: 25%;
-    justify-content: center;
-    text-align: center;
- }
- 
- .list-icon {
-    font-size: 60px;
- }
+   width: 25%;
+   justify-content: center;
+   text-align: center;
 
- ul.about-me {
-    margin-top: 2%;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
- }
+   @media only screen and (max-width: 640px) {
+      width: 90%;
+   }
 
- .portrait {
-    width: 100%;
-    height: auto;
- }
+   h5 {
+      font-size: 30px;
 
- .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
- }
- 
+      @media only screen and (max-width: 640px) {
+         font-size: 20px;
+      }
+   }
+}
 
- .float-left {
-    float: left;
-    width: 60%;
-    padding: 2% 5% 5% 0;
- }
- 
- 
- .float-right {
-    float: right;
-    padding: 2% 5% 5% 0;
-    width: 30%;
- }
+.list-icon {
+   font-size: 60px;
+
+   @media only screen and (max-width: 640px) {
+      font-size: 40px;
+   }
+}
+
+ul.about-me {
+   margin: 2% 0;
+   display: flex;
+   flex-direction: row;
+   align-content: center;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+
+   @media only screen and (max-width: 640px) {
+      flex-direction: column;
+   }
+}
+
+.portrait {
+   width: 100%;
+   height: auto;
+}
+
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+}
+
+
+.float-left {
+   float: left;
+   width: 60%;
+   padding: 2% 5% 5% 0;
+}
+
+.content .float-left,
+.content .float-right {
+   @media only screen and (max-width: 640px) {
+      float: none;
+      width: 100%
+   }
+}
+
+.float-right {
+   float: right;
+   padding: 2% 5% 5% 0;
+   width: 30%;
+}

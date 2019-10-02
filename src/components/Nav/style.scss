@@ -4,12 +4,19 @@
     display: flex;
     flex-direction: row;
     align-content: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: space-evenly;
+    @media only screen and (max-width: 768px) {
+        width: 80%;
+       }
 }
 
 .nav-item {
     color: whitesmoke;
+    @media only screen and (max-width: 768px) {
+        font-size: 16px;
+        padding: 0 3%;
+       }
 }
 
 .nav-item, 
@@ -23,7 +30,7 @@
 
 #navbar,
 .logo,
-.nav-item li {
+.nav-item li a {
     transition: width 1s, height 1s;
 }
 
@@ -43,6 +50,9 @@
     }
     .nav-item {
         font-size: 24px;
+        @media only screen and (max-width: 640px) {
+            font-size: 18px;
+         }
     }
 }
 
@@ -53,3 +63,4 @@
         height: 50px;
     }
 }
+ 
