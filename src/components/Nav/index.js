@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import useWindowDimensions from "../../CustomHooks/UseWindowDimensions";
 import logo from "../../khlogo.png";
-import { Link, animateScroll as scroll } from "react-scroll";
+import MobileNav from "../MobileNav";
+import DesktopNav from "../DesktopNav";
+import { animateScroll as scroll } from "react-scroll";
 import { MdMenu, MdClose } from "react-icons/md";
 import "./style.scss";
 
@@ -82,44 +84,7 @@ const  scrollToTop = () => {
         {smallScreen ? (
           <li>{!showNav ? <MdMenu onClick={() => handleNavClick()}  className="nav-control" /> : <MdClose onClick={() => handleNavClick()} className="nav-control" />}</li>
         ) : null}
-        <div className={` nav-items ${!showNav ? "hide" : ""}`}>
-          <li className="nav-item" >
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={() => handleNavClick()}
-            >
-              About
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="portfolio"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={() => handleNavClick()}
-            >
-              Portfolio
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={() => handleNavClick()}
-            >
-              Contact
-            </Link>
-          </li>
-          </div>
+          {smallScreen ? <MobileNav showNav={showNav} setShowNav={setShowNav} handleNavClick={handleNavClick} /> : <DesktopNav />}
         </ul>
       </div>
     </nav>
