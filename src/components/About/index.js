@@ -26,10 +26,10 @@ const About = () => {
                 </ul>
                 <div className="content">
                     <div className="clearfix">
-                        <div className="float-right">
+                        <div className="float-right right">
                             <img src="images/portrait.jpg" alt="portrait" className="portrait" />
                         </div>
-                        <div className="float-left">
+                        <div className="float-left left">
                             <p>I am a full stack web developer with a background in education. I started coding as a
                                 hobby, and it quickly turned into a passion. I jumped into the field of web devolopment
                                 because I love challenges and learning. I am always looking for ways to grow!</p>

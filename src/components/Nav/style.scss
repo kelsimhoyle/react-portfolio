@@ -4,15 +4,25 @@
     display: flex;
     flex-direction: row;
     align-content: center;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     @media only screen and (max-width: 768px) {
-        width: 80%;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        background-color: $primary-color;
+        opacity: 1;
+        li {
+        margin: auto;
+        padding: 10%;
+        text-align: center;
+    }
        }
 }
 
 .nav-item {
     color: whitesmoke;
+    padding: 2%  5%;
     @media only screen and (max-width: 768px) {
         font-size: 16px;
         padding: 0 3%;
@@ -63,4 +73,17 @@
         height: 50px;
     }
 }
+
+
+.hide {
+    display: none;
+}
  
+.nav-control {
+position: absolute;
+   right: 0;
+   top: 0;
+   padding: 2%;
+   font-size: 30px;
+   color: whitesmoke;
+}

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import useWindowDimensions from "../../CustomHooks/UseWindowDimensions";
 import { useSpring, animated } from 'react-spring'
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
 import "./style.scss";
@@ -14,13 +15,23 @@ const PortfolioItem = props => {
         transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
         config: { mass: 5, tension: 500, friction: 80 }
     })
+
+      const { width } = useWindowDimensions();
+      const [smallScreen, setSmallScreen] = useState(false);
+      useEffect(() => {
+          if (width < 768) {
+            setSmallScreen(true)
+          } else{
+              setSmallScreen(false)
+          }
+      }, [width])
+
     return (
         <animated.div
             className="card"
-            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-            onMouseLeave={() => set({ xys: [0, 0, 1] })}
-            style={{ transform: properties.xys.interpolate(trans) }}>
-
+            onMouseMove={smallScreen ? null : ({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+            onMouseLeave={smallScreen ? null : () => set({ xys: [0, 0, 1] })}
+            style={smallScreen ? null : { transform: properties.xys.interpolate(trans) }}>
                 {flipped ? <animated.div className="c back" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
                     <h5>{props.name}</h5>
                     <p>{props.description}</p>

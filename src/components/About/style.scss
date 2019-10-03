@@ -51,12 +51,17 @@ ul.about-me {
 
 .float-left {
    float: left;
-   width: 60%;
    padding: 2% 5% 5% 0;
 }
 
-.content .float-left,
-.content .float-right {
+.left {
+   width: 60%;
+}
+
+.float-left,
+.float-right,
+.left,
+.right {
    @media only screen and (max-width: 640px) {
       float: none;
       width: 100%
@@ -66,5 +71,8 @@ ul.about-me {
 .float-right {
    float: right;
    padding: 2% 5% 5% 0;
+}
+
+.right {
    width: 30%;
 }

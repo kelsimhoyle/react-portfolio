@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import useWindowDimensions from "../../CustomHooks/UseWindowDimensions";
 import logo from "../../khlogo.png";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { MdMenu, MdClose } from "react-icons/md";
 import "./style.scss";
 
 
@@ -49,18 +51,46 @@ const  scrollToTop = () => {
     if (scrollDirection === "up") setSmaller(false);
   }, [scrollDirection])
 
+
+  const { width } = useWindowDimensions();
+  const [smallScreen, setSmallScreen] = useState(false);
+
+
+  const [showNav, setShowNav] = useState(false);
+  const handleNavClick = () => {
+    if(smallScreen) {
+      setShowNav(showNav => !showNav)
+    }
+  }
+
+  useEffect(() => {
+    if (width < 768) {
+      setSmallScreen(true)
+    } else if (width > 768){
+        setSmallScreen(false)
+    }
+}, [width, smallScreen])
+
   return (
-    <nav className={`nav ${isSmaller ? ' small' : "large"}`} id="navbar">
+    <nav 
+    className={`nav ${isSmaller ? ' small' : "large"} ${smallScreen ? "small-screen" : ""}`}
+     id="navbar">
       <div className="nav-content">
       <img src={logo} alt="Kelsi Hoyle" onClick={scrollToTop} className="logo" />
-        <ul className="nav-items float-right">
-          <li className="nav-item">
+      
+        <ul className={` ${smallScreen ? ""  : "float-right"} `}>
+        {smallScreen ? (
+          <li>{!showNav ? <MdMenu onClick={() => handleNavClick()}  className="nav-control" /> : <MdClose onClick={() => handleNavClick()} className="nav-control" />}</li>
+        ) : null}
+        <div className={` nav-items ${!showNav ? "hide" : ""}`}>
+          <li className="nav-item" >
             <Link
               to="about"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
+              onClick={() => handleNavClick()}
             >
               About
             </Link>
@@ -72,6 +102,7 @@ const  scrollToTop = () => {
               smooth={true}
               offset={-70}
               duration={500}
+              onClick={() => handleNavClick()}
             >
               Portfolio
             </Link>
@@ -83,10 +114,12 @@ const  scrollToTop = () => {
               smooth={true}
               offset={-70}
               duration={500}
+              onClick={() => handleNavClick()}
             >
               Contact
             </Link>
           </li>
+          </div>
         </ul>
       </div>
     </nav>
