@@ -11,12 +11,11 @@
         height: 100vh;
         flex-direction: column;
         background-color: $primary-color;
-        opacity: 1;
         margin: 0;
-        padding: 0;
+        padding-bottom: 10%;
         li {
         margin: auto;
-        padding: 10%;
+        padding-bottom: 10%;
         text-align: center;
     }
        }
@@ -24,10 +23,10 @@
 
 .nav-item {
     color: whitesmoke;
-    padding: 2%  5%;
+    padding: 2% 0 2% 5%;
     @media only screen and (max-width: 768px) {
         font-size: 16px;
-        padding: 0 3%;
+        padding-left: 3%;
        }
 }
 
@@ -74,6 +73,9 @@
     .logo {
         height: 50px;
     }
+    @media only screen and (max-width: 640px) {
+        opacity: 1;
+     }
 }
 
 
@@ -83,9 +85,9 @@
  
 .nav-control {
 position: absolute;
-   right: 0;
-   top: 0;
-   padding: 2%;
+   right: 2%;
+   top: 2%;
+//    padding: 2%;
    font-size: 30px;
    color: whitesmoke;
 }

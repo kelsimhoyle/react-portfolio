@@ -27,4 +27,7 @@ h1 {
    @media only screen and (max-width: 768px) {
       padding-top: 10%;
       }
+      @media only screen and (max-width: 640px) {
+        padding-top: 20%;
+      }
 }
