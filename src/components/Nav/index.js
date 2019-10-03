@@ -4,7 +4,7 @@ import logo from "../../khlogo.png";
 import MobileNav from "../MobileNav";
 import DesktopNav from "../DesktopNav";
 import { animateScroll as scroll } from "react-scroll";
-import { MdMenu, MdClose } from "react-icons/md";
+import { MdMenu } from "react-icons/md";
 import "./style.scss";
 
 
@@ -82,7 +82,7 @@ const  scrollToTop = () => {
       
         <ul className={` ${smallScreen ? ""  : "float-right"} `}>
         {smallScreen ? (
-          <li>{!showNav ? <MdMenu onClick={() => handleNavClick()}  className="nav-control" /> : <MdClose onClick={() => handleNavClick()} className="nav-control" />}</li>
+          <li>{!showNav ? <MdMenu onClick={() => handleNavClick()}  className="nav-control" /> : null }</li>
         ) : null}
           {smallScreen ? <MobileNav showNav={showNav} setShowNav={setShowNav} handleNavClick={handleNavClick} /> : <DesktopNav />}
         </ul>
