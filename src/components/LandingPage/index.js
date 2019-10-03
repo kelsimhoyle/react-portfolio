@@ -7,7 +7,7 @@ const LandingPage = () => {
     return (
         <div id="landing-window">
             <div id="landing-content" >
-                <h2>Hi! I am
+                <h1>Hi! I am
                 <Typist>
                         <span>a JavaScript developer.</span>
                         <Typist.Backspace count={23} delay={400} />
@@ -17,7 +17,7 @@ const LandingPage = () => {
                         <Typist.Backspace count={21} delay={400} />
                         <span>Kelsi.</span>
                     </Typist>
-                    </h2>
+                    </h1>
                     <div className="contact-buttons bottom">
                             <a href="https://github.com/kelsimhoyle" target="_blank" rel="noopener noreferrer" className="contact">
                                 <FaGithub />

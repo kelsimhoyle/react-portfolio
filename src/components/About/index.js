@@ -32,10 +32,10 @@ const About = () => {
                         <div className="float-left left">
                             <p>I am a full stack web developer with a background in education. I started coding as a
                                 hobby, and it quickly turned into a passion. I jumped into the field of web devolopment
-                                because I love challenges and learning. I am always looking for ways to grow!</p>
+                                because I love challenges and learning, and there isn't a better place for that! I am always looking for ways to grow!</p>
                             <h4>Technologies:</h4>
-                            <p>HTML5, CSS3, BootStrap, Materialize, JavaScript, JQuery, MySQL, Node.js, Express,
-                                Sequelize, Handlebars Templating, and always adding more to my skills.</p>
+                            <p>JavaScript, React, React Hooks, Node.js, HTML5, CSS3, BootStrap, Materialize, JQuery, MySQL, MongoDB, NoSQL, Express,
+                                Sequelize, GraphQL, Apollo, Handlebars Templating, and always adding more to my skills.</p>
                         </div>
                     </div>
                 </div>
