@@ -8,7 +8,7 @@ const Contact = () => {
         <div id="contact">
                     <div className="content contact-content">
                         <h2>Contact</h2>
-                        <p>If you have any questions, suggestions, or proposals for me, please reach out!</p>
+                        <p>If you have a project for me, I love a challenge! I cannot wait to hear from you!</p>
                         <div className="contact-buttons">
                             <a href="https://github.com/kelsimhoyle" target="_blank" rel="noopener noreferrer" className="contact">
                                 <FaGithub />

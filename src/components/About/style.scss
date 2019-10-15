@@ -78,3 +78,10 @@ ul.about-me {
 .right {
    width: 30%;
 }
+
+.about p {
+   line-height: 1.2;
+   @media only screen and (max-width: 640px) {
+     line-height: 1;
+   }
+}
