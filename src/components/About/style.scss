@@ -8,12 +8,12 @@ li.describe {
    }
 
    h5 {
-      font-size: 30px;
+      font-size: 24px;
       @media only screen and (max-width: 768px) {
-         font-size: 18px;
+         font-size: 16px;
          }
       @media only screen and (max-width: 640px) {
-         font-size: 20px;
+         font-size: 18px;
       }
    }
 }
