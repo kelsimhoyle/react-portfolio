@@ -15,7 +15,7 @@ const About = () => {
                     </li>
                     <li className="describe">
                         <MdTerrain className="list-icon" />
-                        <h5>Adventerous</h5>
+                        <h5>Adventurous</h5>
                         <p>I am in my element when I am facing a challenging problem.</p>
                     </li>
                     <li className="describe">
@@ -32,7 +32,7 @@ const About = () => {
                         <div className="float-left left about">
                             <p>I am a full stack web developer with a background in education. I started coding as a
                                 hobby, and it quickly turned into a passion. I jumped into the field of web devolopment
-                                because I love challenges and learning, and there isn't a better place for that!</p>
+                                because I love challenges and learning, and there isn't a better place for me to be!</p>
                             <h4>Technologies:</h4>
                             <p>JavaScript, React, React Hooks, Node.js, HTML5, CSS3, BootStrap, Materialize, JQuery, MySQL, MongoDB, NoSQL, Express,
                                 Sequelize, GraphQL, Apollo, Handlebars Templating, and always adding more to my skills.</p>

@@ -4,6 +4,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import "./style.scss";
 
 const LandingPage = () => {
+
     return (
         <div id="landing-window">
             <div id="landing-content" >
