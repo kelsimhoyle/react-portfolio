@@ -1,36 +1,56 @@
 import React from "react";
-import Typist from 'react-typist';
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import "./style.scss";
+import { ContactButtons, LandingContent } from "../../styled";
+import { Parallax } from "react-parallax";
+import image from "../../images/bg.jpg"
+import self from "../../images/self.JPG"
 
 const LandingPage = () => {
 
     return (
-        <div id="landing-window">
-            <div id="landing-content" >
-                <h1>Hi! I am
-                <Typist>
-                        <span>a JavaScript developer.</span>
-                        <Typist.Backspace count={23} delay={400} />
-                        <span>a full-stack developer.</span>
-                        <Typist.Backspace count={23} delay={400} />
-                        <span>a continuous learner.</span>
-                        <Typist.Backspace count={21} delay={400} />
-                        <span>Kelsi.</span>
-                    </Typist>
-                    </h1>
-                    <div className="contact-buttons bottom">
-                            <a href="https://github.com/kelsimhoyle" target="_blank" rel="noopener noreferrer" className="contact">
-                                <FaGithub />
-                            </a>
-                            <a href="https://www.linkedin.com/in/kelsi-hoyle-983266186/" target="_blank" rel="noopener noreferrer"
-                                className="contact">
-                                <FaLinkedinIn />
-                            </a>
-                            </div>
+
+        <Parallax
+            bgImage={image}
+            strength={400}
+            bgImageSizes="100%"
+        >
+            <div style={{ height: "100vh", width: "100vw" }}>
+                <LandingContent id="landing-content" >
+                    <div style={{
+                        position: "relative", left: '50%',
+                        top: '40%',
+                        transform: "translate(-50%,-50%)",
+                        width: "300px",
+                        height: "300px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center"
+                    }}>
+                        <h1 style={{
+                            position: "absolute",
+                            top: "-1%"
+                        }}>Hi! I am Kelsi!</h1>
+                        <img src={self} alt="Kelsi" style={{ width: "auto", height: "250px", borderRadius: "50%", margin: "auto" }} />
+                        <h4 style={{
+                            position: "absolute",
+                            bottom: "2%"
+                        }}>Full-Stack Web Developer.</h4>
+                    </div>
+
+                    <ContactButtons className="bottom">
+                        <a href="https://github.com/kelsimhoyle" target="_blank" rel="noopener noreferrer" className="contact">
+                            <FaGithub />
+                        </a>
+                        <a href="https://www.linkedin.com/in/kelsi-hoyle-983266186/" target="_blank" rel="noopener noreferrer"
+                            className="contact">
+                            <FaLinkedinIn />
+                        </a>
+                    </ContactButtons>
+                </LandingContent>
             </div>
-            </div>
-            )
-        }
-        
+
+        </Parallax>
+    )
+}
+
 export default LandingPage;

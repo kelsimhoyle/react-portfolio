@@ -13,38 +13,32 @@ body {
    }
 }
 
-.content {
-   width: 80%;
-   margin: auto;
-
-   @media only screen and (max-width: 640px) {
-      width: 98%;
-      font-size: .7rem;
-   }
-}
 
 .content p {
    text-align: center;
    font-size: 18px;
-
+   line-height: 2;
    @media only screen and (max-width: 768px) {
       font-size: .9rem;
    }
 }
 
-#portfolio-display,
 footer {
    background-color: $background-light;
 }
 
-h1,
-h2,
 h3,
 h4,
 li.info {
    text-align: center;
 }
-h1,
+
+h1 {
+   font-size: 40px;
+   font-weight: bold;
+   line-height: 2;
+}
+
 h2 {
    font-size: 44px;
    font-weight: bold;
@@ -85,10 +79,9 @@ a:active {
    color: $secondary-color;
 }
 
-#portfolio-display,
-#about,
-#contact {
-   padding: 5% 0;
+p {
+   font-size: 1.1rem;
+   line-height: 1.25;
 }
 
 .bottom {
