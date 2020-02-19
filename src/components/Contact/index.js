@@ -16,7 +16,7 @@ const Contact = () => {
                     <a href="https://github.com/kelsimhoyle" target="_blank" rel="noopener noreferrer" className="contact">
                         <FaGithub />
                     </a>
-                    <a href="https://www.linkedin.com/in/kelsi-hoyle-983266186/" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.linkedin.com/in/kelsihoyle" target="_blank" rel="noopener noreferrer"
                         className="contact">
                         <FaLinkedinIn />
                     </a>

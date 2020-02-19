@@ -69,6 +69,10 @@ h5 {
    font-weight: bold;
 }
 
+a {
+   cursor: pointer;
+}
+
 a:link,
 a:visited {
    color: $primary-color;

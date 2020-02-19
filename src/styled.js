@@ -58,7 +58,8 @@ export const FloatLeft = styled.div`
     width: 60%;
     @media (max-width: 1024px) {
        float: none;
-       width: 100%;
+       width: 95%;
+       margin: auto;
     }
 `
 
@@ -68,7 +69,9 @@ float: right;
    width: 30%;
    @media (max-width: 1024px) {
        float: none;
-       width: 100%;
+       width: 95%;
+       margin: auto;
+       padding: 0;
     }
 `
 
@@ -107,10 +110,6 @@ export const Nav = styled.div`
     text-align: right;
     ul {
         text-align: center;
-    }
-    @media (max-width: 1024px) { 
-        width: 100%;
-        height: 100%;
     }
 `
 
@@ -186,7 +185,7 @@ export const PortfolioItem = styled.div`
      color: white; 
      padding: 5%;
      text-align: center;
-     height: 100%;
+     height: 90%;
      width: 80%;
         p {
             line-height: 1.5;
@@ -208,14 +207,7 @@ export const PortfolioItem = styled.div`
     }
 
     @media (max-width: 1024px) {
-        .content {
-            display: block;
-            padding: 1%
-            width: 90%
-        }
-        .darkBg {
-            background-color: rgba(52,73, 94,0.6);
-        }
+        margin: 2%;
         h4 {
             font-size: 1.5rem;
             padding-top: 1.5rem;
@@ -252,7 +244,7 @@ export const PortfolioParent = styled.div`
   } 
 
   @media (max-width: 1024px) {
-      width: 100%;
+      width: 95%;
   }
 `
 
