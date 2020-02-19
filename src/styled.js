@@ -11,14 +11,6 @@ export const LandingContent = styled.div`
         color: whitesmoke;
         padding: 5%;
     }
-    h1 {
-   @media only screen and (max-width: 768px) {
-      padding-top: 10%;
-      }
-      @media only screen and (max-width: 640px) {
-        padding-top: 20%;
-      }
-}
 `
 
 export const Heading = styled.h2`
@@ -62,14 +54,22 @@ export const ClearFix = styled.div`
 
 export const FloatLeft = styled.div`
     float: left;
-   padding: 2% 2% 1% 0;
-   width: 60%
+    padding: 2% 2% 1% 0;
+    width: 60%;
+    @media (max-width: 1024px) {
+       float: none;
+       width: 100%;
+    }
 `
 
 export const FloatRight = styled.div`
 float: right;
    padding: 2% 5% 5% 0;
    width: 30%;
+   @media (max-width: 1024px) {
+       float: none;
+       width: 100%;
+    }
 `
 
 export const Blurb = styled.div`
@@ -182,7 +182,7 @@ export const PortfolioItem = styled.div`
     }
 
     .content {
-        display: none;
+     display: none;
      color: white; 
      padding: 5%;
      text-align: center;
@@ -209,8 +209,12 @@ export const PortfolioItem = styled.div`
 
     @media (max-width: 1024px) {
         .content {
+            display: block;
             padding: 1%
             width: 90%
+        }
+        .darkBg {
+            background-color: rgba(52,73, 94,0.6);
         }
         h4 {
             font-size: 1.5rem;
